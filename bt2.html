@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Chuyển đổi giữa feet và meters</title>
+</head>
+<body>
+Nhập số feet: <input type="number" id="feet" placeholder="Nhập số feet"> (feet)
+<p id="resultMeter"></p>
+
+</body>
+<script>
+    function feetToMeter(feet) {
+        let meter = feet * 0.305;
+        return meter;
+    }
+    document.getElementById('feet').addEventListener('input', function () {
+        let numFeet = document.getElementById('feet').value;
+        document.getElementById('resultMeter').innerHTML = 'Bằng ' + feetToMeter(numFeet) + '(meter)';
+
+    })
+
+</script>
+</html>s

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+        let stars = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];let stars2 = [ 'Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    console.log(stars2.length, 'hung');
+
+    function getStr(str) {
+        let result = null;
+        for (let i = 0; i < stars.length; i++ ) {
+            if (str === stars[i]) {
+                result = stars2[i]
+                break;
+            } else result = 'Không tìm thấy chòm sao';
+        }
+        document.write(result);
+    }
+    let strClt = prompt('Nhập tên chòm sao: ');
+    getStr(strClt);
+</script>
+
+</body>
+</html>

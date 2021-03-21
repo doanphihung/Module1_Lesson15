@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+Số nguyên cần tính giai thừa: <input type="number" id="int">
+<p id="result"></p>
+<script>
+    function factorial(num) {
+        let resultFactorial = 1;
+        if (num == 0) {
+            resultFactorial = 1;
+        } else if ( num > 0) {
+            for (let i = 1; i <= num; i++) {
+                resultFactorial *= i;
+            }
+        }
+         else resultFactorial = 'Cần nhập số tự nhiên';
+         return resultFactorial;
+    }
+    document.getElementById('int').addEventListener('input', function (){
+        let number = document.getElementById('int').value;
+        number = parseInt(number);
+        console.log(number);
+        document.getElementById('result').innerHTML = `${number}! = ${factorial(number)}`;
+    })
+</script>
+</body>
+</html>

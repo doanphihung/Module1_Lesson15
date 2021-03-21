@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Ứng dụng quản lý sản phẩm sử dụng hàm</title>
+</head>
+<body>
+<h3>Add New Product</h3>
+<input type="text" id="newProduct" placeholder="New Product">
+<button type="button" id="add" onclick="addProduct()">Add</button>
+
+<h4>Display All Product</h4>
+<div id="listProduct"></div>
+
+<script>
+    let listProducts = [];
+    function addProduct() {
+          let newProduct = document.querySelector('#newProduct').value;
+           if (newProduct == '') {
+               alert('Enter a product')
+           } else {
+               listProducts.push(newProduct);
+               alert(`Thêm ${newProduct} thành công!`);
+           }
+           displayProduct(listProducts);
+
+    }
+
+
+    function displayProduct(arr) {
+        sout = '<table>'
+        for (let i = 0; i < arr.length; i++) {
+            sout += '<tr>' +
+                     '<td>'+ arr[i] +'</td>' +
+                     '<td><button>Edit</button></td>' +
+                     '<td><button>Detele</button></td>' +
+                     '</tr>';
+        }
+        sout += '</table>';
+        document.getElementById('listProduct').innerHTML = sout;
+    }
+
+
+</script>
+
+</body>
+</html>
